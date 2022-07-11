@@ -67,19 +67,20 @@ window.onload=function(){
         
         }
     });
-// tik kaip sudeti i viena masyva
-    document.querySelector('#button5').addEventListener('click', function() {
 
-        let masyvas =[];
+    let masyvas =[];
+    
+    function IkelimasImasyva() {
+
         let info;
-
         info = document.querySelector('#info').value ;
  
         masyvas.push(info);
 
         document.querySelector(".masyvas").innerHTML = masyvas;
-        console.log(masyvas);
-    });
+    }
+
+    document.querySelector('#button5').addEventListener('click', IkelimasImasyva);
 
     document.querySelector('#button6').addEventListener('click', function() {
 
@@ -88,12 +89,10 @@ window.onload=function(){
         let y;
         let vienazenklis;
         let masyvas1=[];
-        let paskutinisElementas;
-        let laikinasKint;
 
         sk = parseFloat(document.querySelector('#sk').value) ;
 
-        for(let k=0, i=0; k<i, i<sk.toString().length; k++, i++) {
+        for(let k=0, i=0; i<sk.toString().length; k++, i++) {
             x=k;
             y=k+1;
             vienazenklis = String(sk).slice(x, y);
